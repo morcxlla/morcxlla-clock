@@ -1,8 +1,16 @@
 {
   "name": "@morcxlla/clock",
-  "version": "1.0.1",
-  "description": "Clock logic to correct the delay of 'new Date()'",
   "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
+  "version": "1.0.2",
+  "description": "Clock logic to correct the delay of 'new Date()'",
+  "author": "MCX",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morcxlla/morcxlla-clock.git"
+  },
   "keywords": [
     "clock",
     "time",
@@ -16,8 +24,5 @@
     "digital-clock",
     "synchronized",
     "frontend"
-  ],
-  "author": "MCX",
-  "license": "MIT",
-  "type": "module"
+  ]
 }
