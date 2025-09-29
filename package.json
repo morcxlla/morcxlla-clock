@@ -1,13 +1,23 @@
 {
-  "name": "mcx-clock",
+  "name": "@morcxlla/clock",
   "version": "1.0.0",
-  "description": "",
+  "description": "Clock logic to correct the delay of 'new Date()'",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "keywords": [
+    "clock",
+    "time",
+    "timer",
+    "js",
+    "react",
+    "preact",
+    "vue",
+    "nuxt",
+    "realtime",
+    "digital-clock",
+    "synchronized",
+    "frontend"
+  ],
+  "author": "MCX",
+  "license": "MIT",
+  "type": "module"
 }
