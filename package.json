@@ -3,7 +3,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Clock logic to correct the delay of 'new Date()'",
   "author": "MCX",
   "license": "MIT",
