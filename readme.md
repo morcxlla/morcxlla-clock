@@ -2,6 +2,8 @@
 
 A simple digital clock synchronized to the second, easy to use in **JavaScript**, **React**, **Vue**, or **Node.js**.
 
+Comparison: https://www.mcx.rocks/libraries/clock
+
 ---
 
 ## Installation
