@@ -78,5 +78,5 @@ onMounted(() => {
 You can also install directly from Git for testing:
 
 ```bash
-npm install git+https://github.com/morcxlla/@morcxlla-clock.git
+npm install git+https://github.com/morcxlla/morcxlla-clock.git
 ```
