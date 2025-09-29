@@ -36,8 +36,8 @@ export default function ClockDisplay() {
 
   useEffect(() => {
     const clock = createClock();
-    setTime(clock.getClock()); // set initial time
-    clock.nextTick(setTime); // update every second
+    setTime(clock.getClock());
+    clock.nextTick(setTime);
   }, []);
 
   return <div>{time}</div>;
@@ -59,9 +59,9 @@ const time = ref("");
 
 onMounted(() => {
   const clock = createClock();
-  time.value = clock.getClock(); // inicializa la hora
+  time.value = clock.getClock();
   clock.nextTick((val) => {
-    time.value = val; // actualiza cada segundo
+    time.value = val;
   });
 });
 </script>
