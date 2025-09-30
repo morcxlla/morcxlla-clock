@@ -3,26 +3,12 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Clock logic to correct the delay of 'new Date()'",
   "author": "MCX",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morcxlla/morcxlla-clock.git"
-  },
-  "keywords": [
-    "clock",
-    "time",
-    "timer",
-    "js",
-    "react",
-    "preact",
-    "vue",
-    "nuxt",
-    "realtime",
-    "digital-clock",
-    "synchronized",
-    "frontend"
-  ]
+  }
 }
