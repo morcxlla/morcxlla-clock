@@ -3,12 +3,16 @@
   "main": "index.js",
   "types": "index.d.ts",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Clock logic to correct the delay of 'new Date()'",
   "author": "MCX",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/morcxlla/morcxlla-clock.git"
-  }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
 }
