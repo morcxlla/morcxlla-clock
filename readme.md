@@ -1,84 +1,55 @@
 # README
 
-A simple digital clock synchronized to the second, easy to use in **JavaScript**, **React**, **Vue**, or **Node.js**.
+Lightweight production-ready clock utility with zero dependencies.
 
-Comparison: https://www.mcx.rocks/libraries/clock
-
----
-
-## Installation
+## Install
 
 ```bash
-npm install @morcxlla/clock
+npm install clock-utils
 ```
 
-## Usage in JavaScript / Node
+## Usage
 
 ```js
-import createClock from "@morcxlla/clock";
+import createClock from "clock-utils";
 
-const clock = createClock();
+const clock = createClock({ format: "HH:MM:SS" });
 
-console.log(clock.getClock()); // current time, e.g., "17:35:25"
+// Get current time string
+console.log(clock.getClock()); // "14:32:07"
 
-// Synchronized updates every second
-clock.nextTick(console.log);
-```
-
-## Usage in React
-
-```jsx
-"use client";
-
-import { useEffect, useState } from "react";
-import createClock from "@morcxlla/clock";
-
-export default function ClockDisplay() {
-  const [time, setTime] = useState("");
-
-  useEffect(() => {
-    const clock = createClock();
-    setTime(clock.getClock());
-    clock.nextTick(setTime);
-  }, []);
-
-  return <div>{time}</div>;
-}
-```
-
-## Usage in Vue
-
-```vue
-<template>
-  <div>{{ time }}</div>
-</template>
-
-<script setup>
-import { ref, onMounted } from "vue";
-import createClock from "@morcxlla/clock";
-
-const time = ref("");
-
-onMounted(() => {
-  const clock = createClock();
-  time.value = clock.getClock();
-  clock.nextTick((val) => {
-    time.value = val;
-  });
+// Start ticking
+clock.start((time, date) => {
+  console.log(time); // "14:32:08"
 });
-</script>
+
+// Stop
+clock.stop();
+
+// Cleanup (e.g. on component unmount)
+clock.destroy();
 ```
 
-## Features
+## API
 
-- Clock synchronized to the second, no accumulated delay.
-- Works in Vanilla JS, React, Vue/Nuxt, and Node.js.
-- Lightweight and easy to integrate.
+### `createClock(options?)`
 
-## Install from Git (optional)
+| Option    | Type                            | Default      | Description            |
+| --------- | ------------------------------- | ------------ | ---------------------- |
+| `format`  | `"HH:MM:SS" \| "HH:MM" \| "SS"` | `"HH:MM:SS"` | Output format          |
+| `onError` | `(err: Error) => void`          | `undefined`  | Callback error handler |
 
-You can also install directly from Git for testing:
+### Instance methods
 
-```bash
-npm install git+https://github.com/morcxlla/morcxlla-clock.git
-```
+| Method            | Description                                |
+| ----------------- | ------------------------------------------ |
+| `getClock()`      | Returns current time as formatted string   |
+| `getDate()`       | Returns current `Date` object              |
+| `start(callback)` | Starts ticking, fires callback each second |
+| `stop()`          | Stops the ticker                           |
+| `isRunning()`     | Returns `true` if active                   |
+| `destroy()`       | Stops and marks instance as destroyed      |
+
+## License
+
+MIT
