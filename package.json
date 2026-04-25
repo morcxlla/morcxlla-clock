@@ -1,5 +1,5 @@
 {
-  "name": "clock-sync",
+  "name": "clock-synchronizer",
   "version": "2.0.0",
   "description": "Clock logic to correct the delay of 'new Date()'",
   "author": "MCX",
